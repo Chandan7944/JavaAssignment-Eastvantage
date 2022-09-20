@@ -77,9 +77,11 @@ public class AppointmentService {
 
         if(appointmentList.isPresent()) {
             List<Appointment> appointments = appointmentList.get();
-            log.info("AppointmentService.class: number of appointments between " + startDate.toString()
-            + " - " + endDate.toString() + " are: " + appointments.size());
-            return appointments;
+            if(!appointments.isEmpty()) {
+                log.info("AppointmentService.class: number of appointments between " + startDate.toString()
+                        + " - " + endDate.toString() + " are: " + appointments.size());
+                return appointments;
+            }
         }
 
         log.info("AppointmentService.class: no appointment records found between " + startDate.toString() + " - " + endDate.toString());

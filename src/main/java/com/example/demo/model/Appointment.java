@@ -16,6 +16,12 @@ import java.util.Date;
 @NoArgsConstructor
 @Entity
 public class Appointment {
+    public Appointment(String userName, Date dateTime, int duration, String purpose) {
+        this.userName = userName;
+        this.dateTime = dateTime;
+        this.duration = duration;
+        this.purpose = purpose;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
