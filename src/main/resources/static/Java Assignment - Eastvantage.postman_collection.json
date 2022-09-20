@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "58ba8e24-37e3-4724-9c74-a14e6f3157ef",
+		"name": "Java Assignment - Eastvantage",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAppointmentsForDateRange",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"startDate\": \"2021-03-12 01:10:41\", \r\n    \"endDate\": \"2021-03-12 01:20:41\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/appointment?startDate=2021-03-12 01:43:00&endDate=2021-03-12 01:45:41",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "2021-03-12 01:43:00"
+						},
+						{
+							"key": "endDate",
+							"value": "2021-03-12 01:45:41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteAppointment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/appointment/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAppointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\": \"1\",\r\n    \"userName\": \"test blahhhhhhhh\", \r\n    \"dateAndTime\": \"2021-03-12 01:12:40\", \r\n    \"duration\": \"1\" ,\r\n    \"purpose\": \"test data\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/appointment/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveAppointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"userName\": \"test2\", \r\n    \"dateTime\": \"2021-03-12 02:16:41\", \r\n    \"duration\": \"1\" ,\r\n    \"purpose\": \"test data3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/appointment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAppointmentDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/appointment/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment",
+						"2"
+					],
+					"query": [
+						{
+							"key": "showId",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "releaseYear",
+							"value": "2022",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
