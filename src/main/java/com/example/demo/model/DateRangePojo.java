@@ -13,6 +13,10 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 public class DateRangePojo {
+    public DateRangePojo(Date startDate, Date endDate) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
 
     @DateTimeFormat(style = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
@@ -23,4 +27,5 @@ public class DateRangePojo {
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     @NotNull(message = "DateRangePojo.class: endDate field cannot be blank.")
     private Date endDate;
+
 }
